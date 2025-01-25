@@ -77,7 +77,7 @@ function DirectionsComponent({
           latitude: destinationLatitude,
           longitude: destinationLongitude,
         }}
-        apikey={googleApiKey || ''} // Required
+        apikey={googleApiKey} // Required
         strokeWidth={4}
         onReady={(result) => {
             adjustMapViewForRoute(

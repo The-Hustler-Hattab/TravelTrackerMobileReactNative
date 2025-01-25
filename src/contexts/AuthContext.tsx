@@ -12,8 +12,8 @@ interface AuthContextProps {
   refreshToken: string | null;
   setRefreshToken: React.Dispatch<React.SetStateAction<string | null>>;
 
-  googleApiKey: string | null;
-  setGoogleApiKey: React.Dispatch<React.SetStateAction<string | null>>;
+  googleApiKey: string;
+  setGoogleApiKey: React.Dispatch<React.SetStateAction<string >>;
 
 }
 
@@ -24,7 +24,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [jwtToken, setToken] = useState<string | null>(null);
   const [refreshToken, setRefreshToken] = useState<string | null>(null);
-  const [googleApiKey, setGoogleApiKey] = useState<string | null>(null);
+  const [googleApiKey, setGoogleApiKey] = useState<string >('');
   
   // Keys for AsyncStorage
   const TOKEN_KEY = "JWT_TOKEN";

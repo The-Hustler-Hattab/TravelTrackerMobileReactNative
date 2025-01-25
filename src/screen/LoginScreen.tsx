@@ -15,18 +15,21 @@ function LoginScreen() {
   const clientId = AuthConstants.CLIENT_ID;
   const { theme } = useTheme();
 
+  const redirectUri = AuthSession.makeRedirectUri({path: 'redirect'});
+  console.log("redirectUri: " + redirectUri);
+  
   const [request, response, promptAsync] = AuthSession.useAuthRequest(
     {
       clientId: clientId,
       scopes: AuthConstants.SCOPES,
-      redirectUri: AuthSession.makeRedirectUri(),
+      redirectUri: redirectUri,
     },
     discovery
   );
 
   useEffect(() => {
     if (response && response?.type === "success") {
-      AuthUtils.generateJwt(discovery, response, request)
+      AuthUtils.generateJwt(discovery, response, request, redirectUri)
         .then((res) => {
           console.log("response: " + JSON.stringify(res));
           setToken(res.accessToken);

@@ -38,6 +38,7 @@ class AuthUtils {
     discovery: AuthSession.DiscoveryDocument | null,
     response: AuthSession.AuthSessionResult | null,
     request: AuthSession.AuthRequest | null,
+    redirectUri: string 
   ): Promise<AuthSession.TokenResponse> | never {
     
     const authorizationCode = AuthUtils.generateAuthorizationCode(response);
@@ -47,7 +48,7 @@ class AuthUtils {
       const tokenResponse = AuthSession.exchangeCodeAsync(
         {
           code: authorizationCode || "",
-          redirectUri: AuthSession.makeRedirectUri(),
+          redirectUri: redirectUri,
           clientId: AuthConstants.CLIENT_ID,
           extraParams: {
             code_verifier: request?.codeVerifier || "",

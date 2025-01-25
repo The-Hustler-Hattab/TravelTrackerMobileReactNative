@@ -122,7 +122,7 @@ function MapScreen(): JSX.Element {
           return;
         }
       }
-      Geocoder.init(googleApiKey || '');
+      Geocoder.init(googleApiKey);
 
       let location = await Location.getCurrentPositionAsync({});
 

@@ -40,7 +40,7 @@ function GooglePlacesAutoCompleteComponent({
         // Extract the location from the selected result
       }}
       query={{
-        key: googleApiKey || '', // Replace with your API key
+        key: googleApiKey , // Replace with your API key
         language: "en",
       }}
       preProcess={(data) => {
