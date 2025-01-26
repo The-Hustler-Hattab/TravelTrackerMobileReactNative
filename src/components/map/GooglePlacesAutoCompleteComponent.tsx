@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
-import { Pressable, StyleSheet, View } from "react-native";
-import { GooglePlacesAutocomplete, GooglePlacesAutocompleteRef } from "react-native-google-places-autocomplete";
-import ApiConstants from "../../constants/AppApiConstants";
+import React from "react";
+import {  StyleSheet } from "react-native";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import ColorConstants from "../../constants/ColorConstants";
 import { useTheme } from "../../contexts/ThemeContextProps";
 import { useAuth } from "../../contexts/AuthContext";

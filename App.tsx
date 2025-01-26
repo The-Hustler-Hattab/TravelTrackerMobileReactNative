@@ -18,11 +18,12 @@ import * as Location from "expo-location";
 import LoginScreen from "./src/screen/LoginScreen";
 
 import { AuthProvider, useAuth } from "./src/contexts/AuthContext";
+import AboutScreen from "./src/screen/AboutScreen";
 // Drawer Navigator
 const Drawer = createDrawerNavigator();
 
 function AppNavigator() {
-  const { setRefreshToken, setToken, refreshToken, jwtToken } = useAuth();
+  const { jwtToken } = useAuth();
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -154,6 +155,21 @@ function AppNavigator() {
                   ),
                 }}
               />
+              <Drawer.Screen
+                name={RouteConstants.ABOUT}
+                component={AboutScreen}
+                options={{
+                  drawerIcon: ({ focused, color, size }) => (
+                    <Ionicons
+                      name={focused ? "information-circle" : "information-circle-outline"}
+                      size={size}
+                      color={color}
+                    />
+                  ),
+                }}
+              />
+
+
             </Drawer.Navigator>
           </NavigationContainer>
         </>

@@ -1,4 +1,3 @@
-import React from "react";
 import * as AuthSession from "expo-auth-session";
 import AuthConstants from "../constants/AuthConstants";
 import { jwtDecode } from "jwt-decode";

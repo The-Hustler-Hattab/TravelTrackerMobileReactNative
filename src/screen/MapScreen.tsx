@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { StyleSheet, View, Alert, Text } from "react-native";
+import { StyleSheet, View, Alert } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import * as Location from "expo-location";
 import BottomSheet, { BottomSheetView } from "@gorhom/bottom-sheet";
@@ -13,7 +13,6 @@ import DirectionsComponent from "../components/map/DirectionsComponent";
 import TravelStatistics from "../components/map/TravelStatistics";
 import ConfirmationComponent from "../components/map/ConfirmationComponent";
 import Geocoder from "react-native-geocoding";
-import ApiConstants from "../constants/AppApiConstants";
 import { useAuth } from "../contexts/AuthContext";
 import APIUtil from "../utils/APIUtil";
 import IrsMilageRate from "../models/IrsMilageRate";
@@ -141,7 +140,7 @@ function MapScreen(): JSX.Element {
         })
         .catch((error) => console.warn("Geocoding Error:", error));
     })();
-  }, [setRegion]);
+  }, [setRegion, googleApiKey]);
 
   async function moveToLocation(
     latitude: number | undefined,

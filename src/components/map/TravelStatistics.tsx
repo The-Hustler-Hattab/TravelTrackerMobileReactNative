@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Card } from "react-native-paper";
 import TextComponent from "../general/TextComponent";
 import ColorConstants from "../../constants/ColorConstants";
-import StringUtil from "../../utils/StringUtil";
 import { Ionicons } from "@expo/vector-icons";
 import ConversionUtil from "../../utils/ConversionUtil";
 import { useTheme } from "../../contexts/ThemeContextProps";

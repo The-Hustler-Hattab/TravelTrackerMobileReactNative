@@ -1,9 +1,8 @@
-import React, { createContext, useState, useContext, useEffect, useMemo } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 import * as AuthSession from "expo-auth-session";
 import AuthConstants from "../constants/AuthConstants";
 import AuthUtils from "../utils/AuthUtils";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import DiscoveryHandlerUtil from "../utils/DiscoveryHandlerUtil";
 
 interface AuthContextProps {
   jwtToken: string | null;

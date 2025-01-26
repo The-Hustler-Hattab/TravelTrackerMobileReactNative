@@ -4,7 +4,6 @@ import {
   StyleSheet,
   FlatList,
   Alert,
-  TouchableOpacity,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../contexts/ThemeContextProps";

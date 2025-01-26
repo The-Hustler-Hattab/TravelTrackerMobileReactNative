@@ -3,7 +3,6 @@
 
 
 import * as AuthSession from 'expo-auth-session';
-import React from "react";
 import AuthConstants from '../constants/AuthConstants';
 
 class DiscoveryHandlerUtil {

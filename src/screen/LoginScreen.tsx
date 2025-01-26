@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { View, Text, StyleSheet, Button, Image } from "react-native";
+import { View,  StyleSheet, Button, Image } from "react-native";
 import * as AuthSession from "expo-auth-session";
 import AuthConstants from "../constants/AuthConstants";
 import AuthUtils from "../utils/AuthUtils";

@@ -2,7 +2,7 @@
 import React from "react";
 import { useTheme } from "../../contexts/ThemeContextProps";
 import ColorConstants from "../../constants/ColorConstants";
-import { View, Text, StyleSheet } from 'react-native';
+import {  Text } from 'react-native';
 
 
 import { TextStyle } from 'react-native';

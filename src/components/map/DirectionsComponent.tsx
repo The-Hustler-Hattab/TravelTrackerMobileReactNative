@@ -1,12 +1,9 @@
 import React from "react";
 import { Alert } from "react-native";
 import MapViewDirections from "react-native-maps-directions";
-import ColorConstants from "../../constants/ColorConstants";
-import ApiConstants from "../../constants/AppApiConstants";
 import MapView from "react-native-maps";
 import ConversionUtil from "../../utils/ConversionUtil";
 import { useAuth } from "../../contexts/AuthContext";
-// import { useTheme } from "../contexts/ThemeContextProps";
 
 interface DirectionsComponentProps {
   originLatitude: number;
@@ -26,7 +23,6 @@ function DirectionsComponent({
   mapRef,
   setTravelTimeAndDistance,
 }: DirectionsComponentProps): JSX.Element {
-  //   const { theme } = useTheme();
 
     const { googleApiKey } = useAuth();
   
