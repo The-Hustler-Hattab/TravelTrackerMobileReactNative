@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { StyleSheet, PermissionsAndroid, Platform, Alert } from "react-native";
+import {  PermissionsAndroid, Platform, Alert } from "react-native";
 import MapScreen from "./src/screen/MapScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {
